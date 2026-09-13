@@ -1,18 +1,36 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+.load-more {
+  display: none;
+  margin: 32px auto;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #4e75ff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.load-more.is-visible {
+  display: block;
+}
+
+.loader {
+  display: none;
+  width: 48px;
+  height: 48px;
+  margin: 20px auto;
+  border: 5px solid #ccc;
+  border-top-color: #4e75ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loader.is-visible {
+  display: block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
